@@ -8,6 +8,7 @@ import java.util.Map;
 import org.robovm.apple.foundation.NSArray;
 import org.robovm.apple.foundation.NSDictionary;
 import org.robovm.apple.foundation.NSError;
+import org.robovm.apple.foundation.NSErrorUserInfo;
 import org.robovm.apple.foundation.NSObject;
 import org.robovm.apple.foundation.NSString;
 import org.robovm.apple.gamekit.GKAchievement;
@@ -415,7 +416,8 @@ public class GameCenterManager {
     private NSError buildUnauthenticatedPlayerError () {
         final Map<NSString, NSObject> errorMap = new HashMap<NSString, NSObject>();
         errorMap.put(new NSString("NSLocalizedDescriptionKey"), new NSString("Local player is unauthenticated"));
-        return new NSError(GCM_DOMAIN, GCM_ERROR_NOT_AUTHENTICATED, new NSDictionary<NSString, NSObject>(errorMap));
+        return new NSError(GCM_DOMAIN, GCM_ERROR_NOT_AUTHENTICATED, new NSErrorUserInfo());
+//        return new NSError(GCM_DOMAIN, GCM_ERROR_NOT_AUTHENTICATED, new NSDictionary<NSString, NSObject>(errorMap));
     }
 
 }

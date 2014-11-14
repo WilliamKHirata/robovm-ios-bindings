@@ -3,6 +3,7 @@ package org.robovm.bindings.gpgs;
 
 import org.robovm.apple.foundation.NSDictionary;
 import org.robovm.apple.foundation.NSError;
+import org.robovm.apple.foundation.NSErrorUserInfo;
 import org.robovm.apple.foundation.NSString;
 import org.robovm.objc.ObjCClass;
 import org.robovm.objc.ObjCRuntime;
@@ -12,7 +13,7 @@ import org.robovm.rt.bro.annotation.Library;
 @Library(Library.INTERNAL)
 @NativeClass()
 public class GPGError extends NSError {
-	public GPGError(String domain, long code, NSDictionary<NSString, ?> dict) {
+	public GPGError(String domain, long code, NSErrorUserInfo dict) {
 		super(domain, code, dict);
 	}
 

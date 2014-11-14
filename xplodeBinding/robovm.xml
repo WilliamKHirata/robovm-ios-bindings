@@ -1,0 +1,25 @@
+<config>
+	<executableName>${app.executable}</executableName>
+	<mainClass>${app.mainclass}</mainClass>
+	<os>ios</os>
+	<arch>thumbv7</arch>
+	<target>ios</target>
+	<iosInfoPList>Info.plist.xml</iosInfoPList>
+	<frameworkPaths>
+		<path>libs</path>
+	</frameworkPaths>
+	<frameworks>
+		<framework>Accelerate</framework>
+		<framework>AdSupport</framework>
+		<framework>CoreTelephony</framework>
+		<framework>MediaPlayer</framework>
+		<framework>QuartzCore</framework>
+		<framework>Security</framework>
+		<framework>StoreKit</framework>
+		<framework>XplodeSDK</framework>
+	</frameworks>
+	<weakFrameworks>
+		<framework>AdSupport</framework>
+		<framework>StoreKit</framework>
+	</weakFrameworks>
+</config>

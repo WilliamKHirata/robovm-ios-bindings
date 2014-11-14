@@ -16,7 +16,7 @@ public class GADRequestError extends NSError {
         return GADRequestErrorConstants.errorDomain();
     }
 
-    public GADErrorCode getErrorCode () {
+    public GADErrorCode getGADErrorCode () {
         long code = getCode();
         if (code >= 0 && code < GADErrorCode.values().length) {
             return GADErrorCode.values()[(int)code];

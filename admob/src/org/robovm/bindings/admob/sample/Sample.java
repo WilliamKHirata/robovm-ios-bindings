@@ -34,7 +34,7 @@ public class Sample extends UIApplicationDelegateAdapter {
             @Override
             public void didFailToReceiveAd (GADInterstitial ad, GADRequestError error) {
                 System.out.println(error.description());
-                System.out.println(error.getErrorCode());
+                System.out.println(error.getGADErrorCode());
             }
         });
 

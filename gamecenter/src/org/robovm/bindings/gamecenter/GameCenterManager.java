@@ -4,6 +4,7 @@ package org.robovm.bindings.gamecenter;
 import java.util.ArrayList;
 
 import org.robovm.apple.foundation.NSArray;
+import org.robovm.apple.foundation.NSDictionary;
 import org.robovm.apple.foundation.NSError;
 import org.robovm.apple.foundation.NSErrorUserInfo;
 import org.robovm.apple.foundation.NSString;
@@ -410,6 +411,8 @@ public class GameCenterManager {
      * 
      * @return {@link NSError} */
     private NSError buildUnauthenticatedPlayerError () {
+//    	NSDictionary<NSString, NSString> dict = new NSDictionary<NSString, NSString>();
+//    	dict.put(new NSString("ErrorKey"), new NSString("Local player is unauthenticated"));
         NSErrorUserInfo info = new NSErrorUserInfo().setLocalizedDescription("Local player is unauthenticated");
         return new NSError(GCM_DOMAIN, GCM_ERROR_NOT_AUTHENTICATED, info);
     }

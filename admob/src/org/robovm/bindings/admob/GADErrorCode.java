@@ -1,10 +1,8 @@
 
 package org.robovm.bindings.admob;
 
-import org.robovm.apple.foundation.NSErrorCode;
-
 /** NSError codes for GAD error domain. */
-public enum GADErrorCode implements NSErrorCode {
+public enum GADErrorCode{
     /** Typically this is because the ad did not have the ad unit ID or root view controller set. */
     InvalidRequest,
     /** The ad request was successful, but no ad was returned. */
@@ -28,7 +26,6 @@ public enum GADErrorCode implements NSErrorCode {
     /** Attempting to pass an invalid ad size to an adapter. */
     MediationInvalidAdSize;
 
-    @Override
     public long value () {
         return ordinal();
     }
